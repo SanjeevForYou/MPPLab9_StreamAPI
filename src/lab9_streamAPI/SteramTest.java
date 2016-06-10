@@ -2,6 +2,7 @@ package lab9_streamAPI;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -59,8 +60,13 @@ public class SteramTest {
        
     		System.out.println(chList);   
     		
+    		//Concatanation... of stream
     		 List<Character> combinedList = Stream.concat(charecterStream("San"), charecterStream("Bhu")).collect(Collectors.toList());
     		 System.out.println(combinedList);
+    		 
+    		 List<String> strings = Arrays.asList("Sanjeev","Bhusal","Kumar");
+    		 String [] stringAry = strings.stream().toArray(String[]::new);
+    		 System.out.println(Arrays.toString(stringAry));
 	}
 
 }
