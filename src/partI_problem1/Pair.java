@@ -1,29 +1,25 @@
 package partI_problem1;
 
-public class Pair {
-	String first;
-	String second;
-	public Pair(String f, String s) {
-		first = f;
-		second = s;
-	}
+import java.util.function.Function;
+
+import lesson9.lecture.comparators2.Employee;
+
+public class Pair<T, U> {
+	Function<Employee, T> first;
+	Function<Employee, U> second;
+
+	 public Pair(Function<Employee,T> first,Function<Employee, U> second){
+	        this.first = first;
+	        this.second = second;
+	    }
 	
-	public boolean equals(Object ob) {
-		if(ob == null) return false;
-		if(ob.getClass() != getClass()) return false;
-		Pair p = (Pair)ob;
-		return p.first.equals(first) && p.second.equals(second);
-	}
-	
-	public int hashCode() {
-		int result = 17; //seed
-		int hashFirst = first.hashCode();
-		int hashSecond = second.hashCode();
-		result += 31 * result + hashFirst;
-		result += 31 * result + hashSecond;
-		return result;
-		
-	}
+	 public Function<Employee,T> getFirst(){
+	        return this.first;
+	    }
+
+	    public Function<Employee,U> getSecond(){
+	        return this.second;
+	    }
 
 }
 
