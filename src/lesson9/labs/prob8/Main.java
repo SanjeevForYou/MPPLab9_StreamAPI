@@ -1,6 +1,10 @@
 package lesson9.labs.prob8;
 
 import java.util.*;
+import java.util.stream.Collectors;
+
+import lesson9.labs.prob7a.Employee;
+import lesson9.labs.prob7a.LyamdaLibrary;
 
 public class Main {
 
@@ -21,6 +25,23 @@ public class Main {
 		//print a list of sorted full names - all upper case -- of Employees with
 		//salary > 85000 and whose first name begins with a letter that comes before  the letter 'R'
 
+		//LyamdaLibrary 
+
+
+		LyamdaLibrary<List<Employee>, Double, Character, String> trifunction1 = (lst, sal, chr) -> lst.stream()
+				.filter(emp -> emp.getSalary() > sal).filter(emp -> emp.getLastName().charAt(0) > chr)
+				.map(emp -> emp.getFullName()).sorted().collect(Collectors.joining(","));
+		
+		System.out.println("Result of first query :");
+		System.out.println(trifunction1.apply(list, 100000.0, 'E'));
+		
+		System.out.println();
+		
+		LyamdaLibrary<List<Employee>, Double, Character, String> trifunction2 = (lst, sal, chr) -> lst.stream()
+				.filter(emp -> emp.getSalary() > sal).filter(emp -> emp.getFirstName().charAt(0) > chr)
+				.map(emp -> emp.getFullName().toUpperCase()).sorted().collect(Collectors.joining(","));
+		System.out.println("Result of second query : ");
+		System.out.println(trifunction2.apply(list, 85000.0, 'R'));
 	}
 
 }

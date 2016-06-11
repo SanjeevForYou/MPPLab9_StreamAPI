@@ -23,6 +23,15 @@ public class Employee {
 		return sb.toString();
 		
 	}
+	
+	public String getFullName() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(firstName);
+		sb.append(" ");
+		sb.append(lastName);
+		return sb.toString();
+		
+	}
 
 	public String getFirstName() {
 		return firstName;

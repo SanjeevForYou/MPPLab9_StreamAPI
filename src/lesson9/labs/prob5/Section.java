@@ -5,8 +5,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Section {
-	public static Stream<String> streamSection(Stream<String> stream, int m, int n) {
-		return null; //implement 
+	public static Stream<String> streamSection(Stream<String> stream, int m, int n) {	
+		return stream.skip(m).limit(n);
 	}
 	
 	public static void main(String[] args) {
