@@ -13,6 +13,10 @@ public class Section {
 		System.out.println(streamSection(nextStream(), 0, 3).collect(Collectors.joining(", ")));
 		System.out.println(streamSection(nextStream(), 2, 5).collect(Collectors.joining(", ")));
 		System.out.println(streamSection(nextStream(), 7, 8).collect(Collectors.joining(", ")));	
+		
+		
+		String str = streamSection(nextStream(), 7, 8).collect(Collectors.joining(" and ", "sanjeev kumar ", " ccc"));
+		System.out.println(str);
 	}
 	
 	//support method for the main method -- for testing

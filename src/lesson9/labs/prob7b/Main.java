@@ -14,14 +14,14 @@ public class Main {
 
 	}
 
-	TriFunction<List<Employee>, Double, Character, String> trifunction = (lst, sal, chr) -> lst.stream()
-			.filter(emp -> emp.getSalary() > sal)
-			.filter(emp -> emp.getLastName().charAt(0) > chr)
-			.map(emp -> emp.getFullName())
-			.sorted()
-			.collect(Collectors.joining(","));
-
-	System.out.println("Result after lyamda library is :");
-	System.out.println(trifunction.apply(list,100000.0,'M'));
+//	TriFunction<List<Employee>, Double, Character, String> trifunction = (lst, sal, chr) -> lst.stream()
+//			.filter(emp -> emp.getSalary() > sal)
+//			.filter(emp -> emp.getLastName().charAt(0) > chr)
+//			.map(emp -> emp.getFullName())
+//			.sorted()
+//			.collect(Collectors.joining(","));
+//
+//	System.out.println("Result after lyamda library is :");
+//	System.out.println(trifunction.apply(list,100000.0,'M'));
 
 }

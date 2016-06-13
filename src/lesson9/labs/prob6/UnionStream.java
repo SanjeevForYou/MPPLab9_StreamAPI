@@ -32,6 +32,8 @@ public class UnionStream {
         List<Set<String>> lst = new ArrayList<Set<String>>();
         lst.add(set1);
         lst.add(set2);
+        System.out.println(lst);
+       
         
         System.out.println(union(lst));
 	}
