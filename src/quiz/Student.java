@@ -15,4 +15,11 @@ public class Student {
 	{
 		return this.gpa;
 	}
+	
+	public String getName()
+	{
+		return name;
+	}
 }
+
+

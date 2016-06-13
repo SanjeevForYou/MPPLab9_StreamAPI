@@ -13,7 +13,7 @@ Map<SortMethod, Pair> sortDiscriminator = new HashMap<SortMethod, Pair>();
 	
 	public void sort(List<Employee> emps, final SortMethod method) {
 		
-		Collections.sort(emps, comparing(sortDiscriminator.get(method).first)
+		//Collections.sort(emps, comparing(sortDiscriminator.get(method).first);
 		
 //		Collections.sort(emps, (e1,e2) ->
 //		{
