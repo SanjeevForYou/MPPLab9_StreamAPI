@@ -1,6 +1,5 @@
 package quiz;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -75,8 +74,14 @@ public class Quiz_Stream {
 		List<Integer> lstOfInt = intgerStream.collect(Collectors.toList());
 		System.out.println(lstOfInt);
 		
+		
+		//Streram Practice more:
+		List<String> mylist = Arrays.asList("a1","a2","b1","c2","c1");
+		
+		mylist.stream().filter(s -> s.startsWith("a")).map(String::toUpperCase).sorted().forEach(s -> System.out.println(s));
+		System.out.println("come on");
 	}
-	
+
 	public static Stream<Character> getCharacterStream(String s)
 	{
 		List<Character> ch = new ArrayList<Character>();

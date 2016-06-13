@@ -3,6 +3,12 @@ package lesson9.labs.prob8;
 import java.util.*;
 import java.util.stream.Collectors;
 
+<<<<<<< HEAD
+=======
+import lesson9.labs.prob7a.Employee;
+import lesson9.labs.prob7a.LyamdaLibrary;
+
+>>>>>>> e0b37d2c4714f90d6cec5aa105c3871992bb5317
 public class Main {
 
 	public static void main(String[] args) {

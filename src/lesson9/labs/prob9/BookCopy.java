@@ -16,4 +16,9 @@ public class BookCopy {
 	public void changeAvailability() {
 		isAvailable = !isAvailable;
 	}
+<<<<<<< HEAD
+=======
+	
+	
+>>>>>>> e0b37d2c4714f90d6cec5aa105c3871992bb5317
 }

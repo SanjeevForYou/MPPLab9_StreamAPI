@@ -2,6 +2,10 @@ package lesson9.labs.prob9;
 
 import java.util.ArrayList;
 import java.util.List;
+<<<<<<< HEAD
+=======
+import java.util.Optional;
+>>>>>>> e0b37d2c4714f90d6cec5aa105c3871992bb5317
 
 @SuppressWarnings("unused")
 public class Book {
@@ -22,4 +26,15 @@ public class Book {
 		BookCopy copy = new BookCopy(this, copies.size() + 1, true);
 		copies.add(copy);
 	}
+<<<<<<< HEAD
+=======
+	
+	public boolean isAvailable()
+	{
+		boolean value = this.copies.stream()
+				.map(x -> x.isAvailable())
+				.reduce(false, (a,b) -> a || b);
+		return value;
+	}
+>>>>>>> e0b37d2c4714f90d6cec5aa105c3871992bb5317
 }

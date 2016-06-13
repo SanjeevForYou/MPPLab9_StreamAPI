@@ -11,6 +11,18 @@ public class Employee {
 		this.salary = s;
 	}
 	
+<<<<<<< HEAD
+=======
+	public String getFullName() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(firstName);
+		sb.append(" ");
+		sb.append(lastName);
+		return sb.toString();
+		
+	}
+	
+>>>>>>> e0b37d2c4714f90d6cec5aa105c3871992bb5317
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder("<");
